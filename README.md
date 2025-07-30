@@ -99,12 +99,3 @@ Edit
 
 ---
 
-## ✅ After adding the README:
-
-1. Save it as `README.md` in your project folder.
-2. Run the following commands in terminal:
-
-```bash
-git add README.md
-git commit -m "Added project README"
-git push
