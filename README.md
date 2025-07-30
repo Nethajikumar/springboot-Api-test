@@ -1,101 +1,116 @@
-# 📝 Spring Boot To-Do List API
+# Spring Boot API Test Project
 
-A simple RESTful API for managing a to-do list, built with **Spring Boot**.  
-This project demonstrates the core CRUD operations and is tested using **Postman**.
+This is a simple Spring Boot RESTful API project that demonstrates basic CRUD (Create, Read, Update, Delete) operations using:
+
+- Spring Boot
+- In-Memory H2 Database
+- Spring Data JPA
+- REST APIs (GET, POST, PUT, DELETE)
+- Tested via Postman
 
 ---
 
-## 🚀 Features
+## 🔧 Features
 
-- ✅ Add a new to-do item
-- 📋 Get all to-do items
-- 🔍 Get a to-do item by ID
-- 📝 Update a to-do item
-- ❌ Delete a to-do item
+- ✅ Create a resource using `POST`
+- ✅ Read all resources or a single resource using `GET`
+- ✅ Update a resource using `PUT`
+- ✅ Delete a resource using `DELETE`
+- ✅ All data is stored temporarily using H2 in-memory database
+- ✅ API tested using Postman
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Java 17**
-- **Spring Boot**
-- **Spring Web**
-- **Spring Data JPA**
-- **H2 (In-memory database)** or MySQL
-- **Postman** for testing
+- Java 23
+- Spring Boot 
+- Spring Web
+- Spring Data JPA
+- H2 Database
+- Maven
 
 ---
 
-## 📦 How to Run
+## 🚀 How to Run the Project
 
-1. **Clone the repository:**
+### Prerequisites
 
-```bash
-git clone https://github.com/Nethajikumar/springboot-todo-crud.git
-cd springboot-todo-crud
+- Java JDK installed
+- Maven installed
+- Any IDE (like IntelliJ IDEA, Eclipse, VS Code)
 
-Run the application using Maven:
+### Steps
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/springboot-api-test-project.git
+   cd springboot-api-test-project
+Run the application:
 
 bash
 Copy
 Edit
 ./mvnw spring-boot:run
-Or using Maven directly:
+Or run it from your IDE.
 
-bash
-Copy
-Edit
-mvn spring-boot:run
-Visit: http://localhost:8080
+🔗 API Endpoints
+Base URL: http://localhost:8080/api
 
-🔌 API Endpoints
 Method	Endpoint	Description
-GET	/api/todos	Get all todos
-GET	/api/todos/{id}	Get todo by ID
-POST	/api/todos	Create new todo
-PUT	/api/todos/{id}	Update todo by ID
-DELETE	/api/todos/{id}	Delete todo by ID
+GET	/api/items	Get all items
+GET	/api/items/{id}	Get item by ID
+POST	/api/items	Create new item
+PUT	/api/items/{id}	Update item by ID
+DELETE	/api/items/{id}	Delete item by ID
 
-📬 Sample JSON (POST/PUT)
-json
-Copy
-Edit
-{
-  "title": "Learn Spring Boot",
-  "description": "Build a CRUD API",
-  "completed": false
-}
+Replace items with your actual entity/resource name.
+
+🗃️ H2 Database Console
+URL: http://localhost:8080/h2-console
+
+JDBC URL: jdbc:h2:mem:testdb
+
+Username: sa
+
+Password: (leave blank)
+
+Make sure H2 Console is enabled in application.properties.
+
 🧪 Testing with Postman
-You can import the Postman collection (coming soon...) or test manually using:
+Import the API endpoints in Postman.
 
-GET/POST/PUT/DELETE methods
+Use the example requests:
 
-URL: http://localhost:8080/api/todos
+POST: Send JSON body to create item
 
-📁 Project Structure
+GET: Retrieve items
+
+PUT: Update existing item
+
+DELETE: Delete item by ID
+
+📁 Folder Structure
 css
 Copy
 Edit
-src/
- └── main/
-     └── java/
-         └── com/example/todo/
-             ├── controller/
-             ├── service/
-             ├── repository/
-             └── model/
- └── resources/
-     └── application.properties
-🙏 Acknowledgement
-Project inspired by learning tutorials on YouTube.
-Special thanks to the Spring Boot open-source community.
+src
+├── main
+│   ├── java
+│   │   └── com.example.apitest
+│   │       ├── controller
+│   │       ├── model
+│   │       ├── repository
+│   │       └── Application.java
+│   └── resources
+│       ├── application.properties
+│       └── data.sql (optional)
+📄 License
+This project is for educational and testing purposes only.
 
-📃 License
-This project is open-source and available for educational use.
-
-yaml
-Copy
-Edit
+🙋‍♂️ Author
+Nethaji K
+Feel free to fork this repo and use it for learning or testing.
 
 ---
-
